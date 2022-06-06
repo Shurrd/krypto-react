@@ -10,7 +10,6 @@ const FetchCoins = () => {
     const response = await fetch(url);
     const data = await response.json();
     setCoins(data);
-    console.log(data);
   };
   useEffect(() => {
     getCoins();

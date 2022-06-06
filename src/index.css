@@ -1,1 +1,185 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --whiteLight: rgb(224, 226, 192);
+  --navBackground: rgb(14, 14, 32);
+  --primaryBlack: #000;
+  --primaryGreen: rgb(124, 175, 124);
+  --sectionHeader: rgb(6, 6, 49);
+  --body: hsl(210, 36%, 96%);
+  --linkHover: rgb(160, 161, 142);
+  --boxShadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.75);
+}
+
+body {
+  background-color: var(--body);
+}
+
+.nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: var(--navBackground);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+}
+
+.nav-container .nav-left {
+  padding: 15px;
+  font-size: 1.8rem;
+  color: var(--whiteLight);
+  font-weight: 500;
+  margin-top: -14px;
+}
+
+.nav-container .nav-right {
+  padding: 25px;
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: var(--whiteLight);
+  margin-top: 0px;
+}
+
+.nav-right a {
+  text-decoration: none;
+  color: var(--whiteLight);
+  text-transform: capitalize;
+}
+
+.nav-right a:hover {
+  color: var(--linkHover);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-left a {
+  text-decoration: none;
+  color: var(--whiteLight);
+}
+
+.nav-left p span {
+  font-weight: 700;
+  font-size: 4rem;
+  color: var(--primaryGreen);
+  margin-right: 2px;
+}
+
+.nav-right h4 {
+  margin: 20px;
+}
+
+@media (min-width: 1080px) {
+  .nav-container .nav-left {
+    margin-left: 80px;
+  }
+  .nav-container .nav-right {
+    margin-right: 120px;
+  }
+}
+
+.section {
+  margin-top: 6rem;
+}
+
+.section .about {
+  margin-bottom: 3rem;
+  color: var(--sectionHeader);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.section article {
+  margin: 40px;
+  line-height: 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.section-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form {
+  -webkit-box-shadow: var(--boxShadow);
+          box-shadow: var(--boxShadow);
+  background-color: white;
+  width: 90vw;
+  height: 10rem;
+}
+
+@media (min-width: 1200px) {
+  .form {
+    width: 50vw;
+  }
+}
+
+.form-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form-control input {
+  margin-top: 10px;
+  height: 3rem;
+  width: 90%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 1.3rem;
+  padding-left: 8px;
+  border: none;
+  background-color: var(--body);
+}
+
+.form-control label {
+  padding: 10px;
+  margin-left: 23px;
+  margin-top: 23px;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  color: var(--navBackground);
+}
+/*# sourceMappingURL=index.css.map */
