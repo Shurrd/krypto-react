@@ -3,7 +3,7 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
 :root {
@@ -16,6 +16,8 @@
   --body: hsl(210, 36%, 96%);
   --linkHover: rgb(160, 161, 142);
   --boxShadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.75);
+  --primatyBoldText: rgb(38, 39, 29);
+  --coinBoxShadow: 0px 11px 15px -3px rgba(0, 0, 0, 0.75);
 }
 
 body {
@@ -196,26 +198,180 @@ h4 {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  place-items: center;
+  gap: 5rem;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1200px) {
+  .coin-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1680px) {
+  .coin-container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
 }
 
 .coin {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 320px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 400px;
+  width: 30rem;
   background-color: var(--coinBackground);
   border-radius: 10px;
+  -webkit-box-shadow: var(--coinBoxShadow);
+          box-shadow: var(--coinBoxShadow);
 }
 
 .coin img {
   width: 10rem;
 }
 
-.coin .coin-div {
-  border: 1px solid blue;
+.coin .info-container {
+  margin-right: 160px;
+}
+
+.coin .info-container h1 {
+  text-transform: uppercase;
+  margin-top: 25px;
+  font-weight: 900;
+  color: var(--primatyBoldText);
+  font-size: 2rem;
+}
+
+.coin .info-container .symbol {
+  text-transform: uppercase;
+  margin-top: 10px;
+  font-weight: 300;
+  font-size: 1.4rem;
+}
+
+.coin .info-container .price {
+  text-transform: uppercase;
+  margin-top: 10px;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.coin .info-container .price span {
+  color: #317094;
+  font-weight: 600;
+}
+
+.image {
+  margin-top: 30px;
+  margin-left: 60px;
+}
+
+.coin:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+
+.loading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  -webkit-transform: scale(5);
+          transform: scale(5);
+  margin-top: 12rem;
+}
+
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid var(--primaryGreen);
+  opacity: 1;
+  border-radius: 50%;
+  -webkit-animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+          animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+}
+
+@-webkit-keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
 }
 /*# sourceMappingURL=index.css.map */
