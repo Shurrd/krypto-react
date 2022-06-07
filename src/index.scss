@@ -12,12 +12,19 @@
   --primaryBlack: #000;
   --primaryGreen: rgb(124, 175, 124);
   --sectionHeader: rgb(6, 6, 49);
+  --coinBackground: rgb(227, 230, 233);
   --body: hsl(210, 36%, 96%);
   --linkHover: rgb(160, 161, 142);
   --boxShadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.75);
 }
 body {
   background-color: var(--body);
+}
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
 }
 
 .nav-container {
@@ -135,5 +142,26 @@ body {
     font-weight: 700;
     letter-spacing: 0.2rem;
     color: var(--navBackground);
+  }
+}
+.coin-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.coin {
+  // border: 1px solid red;
+  display: flex;
+  // justify-content: center;
+  height: 320px;
+  background-color: var(--coinBackground);
+  border-radius: 10px;
+  img {
+    width: 10rem;
+  }
+  .coin-div {
+    border: 1px solid blue;
   }
 }
