@@ -46,7 +46,7 @@ const FetchCoins = () => {
   };
   useEffect(() => {
     getCoins();
-  }, [url]);
+  }, []);
 
   if (loading) {
     return <Loading />;

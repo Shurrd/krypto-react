@@ -12,17 +12,25 @@ const Footer = () => {
         <h3>
           Designed and Developed by{" "}
           <span>
-            <a href="https://jesuisabraham.netlify.app/" target="_blank">
+            <a
+              href="https://jesuisabraham.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+            >
               Abraham
             </a>
           </span>
         </h3>
 
         <div className="icons">
-          <a href="https://github.com/Shurrd" target="_blank">
+          <a href="https://github.com/Shurrd" target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faGithub} className="icon"></FontAwesomeIcon>
           </a>
-          <a href="https://twitter.com/shurrrrd" target="_blank">
+          <a
+            href="https://twitter.com/shurrrrd"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FontAwesomeIcon
               icon={faTwitter}
               className="icon"
@@ -32,6 +40,7 @@ const Footer = () => {
           <a
             href="https://www.linkedin.com/in/adeoluwa-adeyemi-45743222b/"
             target="_blank"
+            rel="noreferrer"
           >
             <FontAwesomeIcon
               icon={faLinkedin}

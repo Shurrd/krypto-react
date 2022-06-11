@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Sparklines, SparklinesLine } from "react-sparklines";
 export default function Coin({
   id,
