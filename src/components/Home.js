@@ -1,14 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import FetchCoins from "./FetchCoins";
-import Loading from "./Loading";
-import Search from "./Search";
+import Footer from "./Footer";
 
 const Home = () => {
-  const [loading, setLoading] = useState(true);
-
   return (
     <>
-      <Search />
       <FetchCoins />
     </>
   );

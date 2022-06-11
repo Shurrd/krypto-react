@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Sparklines, SparklinesLine } from "react-sparklines";
 export default function Coin({
   id,
   name,
@@ -6,6 +7,7 @@ export default function Coin({
   image,
   current_price: price,
   market_cap: marketCap,
+  sparkline_in_7d: sparkline,
 }) {
   return (
     <>
@@ -17,8 +19,13 @@ export default function Coin({
             <h3 className="price">
               Price: <span>${price}</span>{" "}
             </h3>
+            <h3 style={{ marginTop: "20px" }}>
+              <Sparklines data={sparkline.price}>
+                <SparklinesLine color="teal" />
+              </Sparklines>
+            </h3>
           </div>
-          {/* <h4>{marketCap}</h4> */}
+
           <div className="image">
             <img src={image} alt={name} />
           </div>
